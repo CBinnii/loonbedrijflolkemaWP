@@ -1,0 +1,35 @@
+@import "mixins/_clearfix.scss";
+@import "mixins/_colunas.scss";
+@import "mixins/_vertical-align.scss";
+@import "vendor/_variables.scss";
+@import "vendor/_font-face.scss";
+@import "vendor/bootstrap/bootstrap.scss";
+@import "vendor/bootstrap/bootstrap-grid.scss";
+@import "vendor/bootstrap/bootstrap-reboot.scss";
+@import "vendor/bootstrap/bootstrap-utilities.scss";
+@import "vendor/swiper/_swiper.scss";
+@import "vendor/reset";
+
+@import "_button.scss";
+@import "_hexagono.scss";
+@import "_slider.scss";
+@import "_header.scss";
+@import "_home.scss";
+@import "_contact.scss";
+@import "_footer.scss";
+
+body {
+	font-family: 'Open Sans', Verdana, sans-serif;
+}
+
+@media screen and (max-width: 991px) {
+	.mob-mb-15 {
+		margin-bottom: 15px;
+	}
+	.mob-mb-30 {
+		margin-bottom: 30px;
+	}
+	.mob-mb-45 {
+		margin-bottom: 45px;
+	}
+}

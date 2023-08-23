@@ -1,0 +1,51 @@
+.button {
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 991px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-default {
+        position: relative;
+        // width: 215px;
+        background-color: $primary;
+        padding: 15px 30px;
+        padding-right: 70px;
+        border: none;
+        border-radius: 50px;
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: -0.72px;
+        text-transform: uppercase;
+        margin-right: 15px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        &.button-no-hexagon {
+            padding-right: 30px;
+
+            @media screen and (max-width: 991px) {
+                max-width: 300px;
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+
+        @media screen and (max-width: 991px) {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .hexagon {
+            right: 15px;
+        }
+    }
+}

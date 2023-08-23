@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title><?php echo get_the_title(); ?> - Loonbedrijf Lolkema</title>
+		<link rel="icon" type="image/x-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/faviicon.png">
+        <?php wp_head(); ?>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap">
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/style.css">
+	</head>
+	<body>
+		<header id="header" class="header">
+			<nav class="navbar navbar-expand-xl">
+				<div class="container">
+					<a class="navbar-brand" href="index.html">
+						<img src="images/logo-header.png" alt="Logo">
+					</a>
+					<div class="navbar-menu">
+						<div class="collapse navbar-collapse" id="navbar-collapse">
+							<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+								<li class="nav-item">
+									<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="agrarisch.html">Agrarisch Loonwerk</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="grondverzet.html">Grondverzet & Infra</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="cultuurtechnisch.html">Cultuurtechnisch werk</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="civiele.html">Civiele techniek</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="verhuur.html">Verhuur</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="contact.html">Contact</a>
+								</li>
+							</ul>
+						</div>
+						<button class="navbar-toggler">
+							<div class="menu-button" id="menu-button" onclick="menuMobile()">
+								<div class="bar"></div>
+								<div class="bar"></div>
+								<div class="bar"></div>
+							</div>
+						</button>
+					</div>
+				</div>
+			</nav>
+		</header>
+		
+		<section class="main">
+			<div class="slider">
+				<div class="swiper slider-home">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="slider-general" style="background-image: url('images/slider.png');">
+								<!-- <div class="container">
+									<div class="row row-slider">
+										<div class="col-md-12 line-slider-text">
+											<h1>Proporcionamos a melhor e mais inovadora experiência de entrega de software!</h1>
+											<p>"Nós somos uma empresa especializada em desenvolver soluções de tecnologia estratégicas."</p>
+										</div>
+									</div>
+								</div> -->
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="slider-general" style="background-image: url('images/Slider_2.jpg');">
+								<!-- <div class="container">
+									<div class="row row-slider">
+										<div class="col-md-12 line-slider-text">
+											<h1>Proporcionamos a melhor e mais inovadora experiência de entrega de software!</h1>
+											<p>"Nós somos uma empresa especializada em desenvolver soluções de tecnologia estratégicas."</p>
+										</div>
+									</div>
+								</div> -->
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="slider-general" style="background-image: url('images/image-1.jpg');">
+								<div class="container">
+									<!-- <div class="row row-slider">
+										<div class="col-md-12 line-slider-text">
+											<h1>Proporcionamos a melhor e mais inovadora experiência de entrega de software!</h1>
+											<p>"Nós somos uma empresa especializada em desenvolver soluções de tecnologia estratégicas."</p>
+										</div>
+									</div> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-pagination swiper-pagination-slider-home"></div>
+			</div>
+
+			<div class="section">
+				<div class="section-about">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 left">
+								<div class="text-box">
+									<p>Heb je een vraag of wil je gebruik maken van één van onze diensten?</p>
+	
+									<div class="button mob-mb-30">
+										<button class="button-default">
+											Lorem Ipsum
+			
+											<div class="hexagon">
+												<div class="hexagon-inner">
+													<div class="hexagon-inner-in">
+														<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+															<path d="M12.2831 9.41547L7.89448 13.8114C7.59115 14.1153 7.10065 14.1153 6.80054 13.8114L6.07125 13.0809C5.76792 12.7771 5.76792 12.2858 6.07125 11.9852L9.18204 8.8692L6.07125 5.75324C5.76792 5.4494 5.76792 4.95808 6.07125 4.65748L6.79732 3.92051C7.10065 3.61667 7.59115 3.61667 7.89126 3.92051L12.2799 8.31647C12.5865 8.62031 12.5865 9.11163 12.2831 9.41547Z" fill="black"/>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-6 right">
+								<p>In meer dan 40 jaar tijd is Loonbedrijf Lolkema uitgegroeid van een eenmanszaak tot een onderneming met gecertificeerde medewerkers. Met een actueel machinepark wordt een grote verscheidenheid aan werkzaamheden uitgevoerd in de agrarische sector en de grond, weg en waterbouw. Door een flexibele inzet van een gemotiveerd team wordt elke dag gestreefd naar een hoge klanttevredenheid.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section-services">
+					<div class="container">
+						<div class="section-services-top">
+							<h1 class="title white">Onze Services</h1>
+
+							<div class="swiper-navigation-slider">
+								<div class="hexagon swiper-button-prev">
+									<div class="hexagon-inner">
+										<div class="hexagon-inner-in primary">
+											<svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none">
+												<path d="M6.57227 9.86974L11.8848 4.28483C12.252 3.89882 12.8457 3.89882 13.209 4.28483L14.0918 5.21291C14.459 5.59893 14.459 6.22312 14.0918 6.60503L10.3262 10.5637L14.0918 14.5225C14.459 14.9085 14.459 15.5327 14.0918 15.9146L13.2129 16.8509C12.8457 17.2369 12.252 17.2369 11.8887 16.8509L6.57617 11.266C6.20508 10.8799 6.20508 10.2558 6.57227 9.86974Z" fill="white"/>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="hexagon swiper-button-next">
+									<div class="hexagon-inner">
+										<div class="hexagon-inner-in primary">
+											<svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none">
+												<path d="M14.4277 12.0231L9.11523 17.608C8.74805 17.994 8.1543 17.994 7.79102 17.608L6.9082 16.6799C6.54102 16.2939 6.54102 15.6697 6.9082 15.2878L10.6738 11.3291L6.9082 7.37037C6.54102 6.98435 6.54102 6.36016 6.9082 5.97825L7.78711 5.04195C8.1543 4.65594 8.74805 4.65594 9.11133 5.04195L14.4238 10.6269C14.7949 11.0129 14.7949 11.6371 14.4277 12.0231Z" fill="white"/>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="box-hexagon">
+							<div class="slider swiper-services">
+								<div class="swiper-wrapper">
+								  <div class="swiper-slide">
+									<div class="poligono-slider" style="background-image: url('images/image-1.jpg');">
+										<div class="box-hexagon-text">
+											<p>Agrarisch Loonwerk</p>
+
+											<div class="hexagon">
+												<div class="hexagon-inner">
+													<div class="hexagon-inner-in">
+														<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+															<path d="M12.2831 9.41547L7.89448 13.8114C7.59115 14.1153 7.10065 14.1153 6.80054 13.8114L6.07125 13.0809C5.76792 12.7771 5.76792 12.2858 6.07125 11.9852L9.18204 8.8692L6.07125 5.75324C5.76792 5.4494 5.76792 4.95808 6.07125 4.65748L6.79732 3.92051C7.10065 3.61667 7.59115 3.61667 7.89126 3.92051L12.2799 8.31647C12.5865 8.62031 12.5865 9.11163 12.2831 9.41547Z" fill="black"/>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								  </div>
+								  <div class="swiper-slide">
+									<div class="poligono-slider" style="background-image: url('images/image-2.jpg');">
+										<div class="box-hexagon-text">
+											<p>Grondverzet & Infra</p>
+											
+											<div class="hexagon">
+												<div class="hexagon-inner">
+													<div class="hexagon-inner-in">
+														<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+															<path d="M12.2831 9.41547L7.89448 13.8114C7.59115 14.1153 7.10065 14.1153 6.80054 13.8114L6.07125 13.0809C5.76792 12.7771 5.76792 12.2858 6.07125 11.9852L9.18204 8.8692L6.07125 5.75324C5.76792 5.4494 5.76792 4.95808 6.07125 4.65748L6.79732 3.92051C7.10065 3.61667 7.59115 3.61667 7.89126 3.92051L12.2799 8.31647C12.5865 8.62031 12.5865 9.11163 12.2831 9.41547Z" fill="black"/>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								  </div>
+								  <div class="swiper-slide">
+									<div class="poligono-slider" style="background-image: url('images/image-3.jpg');">
+										<div class="box-hexagon-text">
+											<p>Cultuurtechnisch werk</p>
+											
+											<div class="hexagon">
+												<div class="hexagon-inner">
+													<div class="hexagon-inner-in">
+														<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+															<path d="M12.2831 9.41547L7.89448 13.8114C7.59115 14.1153 7.10065 14.1153 6.80054 13.8114L6.07125 13.0809C5.76792 12.7771 5.76792 12.2858 6.07125 11.9852L9.18204 8.8692L6.07125 5.75324C5.76792 5.4494 5.76792 4.95808 6.07125 4.65748L6.79732 3.92051C7.10065 3.61667 7.59115 3.61667 7.89126 3.92051L12.2799 8.31647C12.5865 8.62031 12.5865 9.11163 12.2831 9.41547Z" fill="black"/>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								  </div>
+								  <div class="swiper-slide">
+									<div class="poligono-slider" style="background-image: url('images/image-4.jpg');">
+										<div class="box-hexagon-text">
+											<p>Civiele Techniek</p>
+											
+											<div class="hexagon">
+												<div class="hexagon-inner">
+													<div class="hexagon-inner-in">
+														<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+															<path d="M12.2831 9.41547L7.89448 13.8114C7.59115 14.1153 7.10065 14.1153 6.80054 13.8114L6.07125 13.0809C5.76792 12.7771 5.76792 12.2858 6.07125 11.9852L9.18204 8.8692L6.07125 5.75324C5.76792 5.4494 5.76792 4.95808 6.07125 4.65748L6.79732 3.92051C7.10065 3.61667 7.59115 3.61667 7.89126 3.92051L12.2799 8.31647C12.5865 8.62031 12.5865 9.11163 12.2831 9.41547Z" fill="black"/>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								  </div>
+								  <div class="swiper-slide">
+									<div class="poligono-slider" style="background-image: url('images/image-5.jpg');">
+										<div class="box-hexagon-text">
+											<p>Verhuur</p>
+											
+											<div class="hexagon">
+												<div class="hexagon-inner">
+													<div class="hexagon-inner-in">
+														<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+															<path d="M12.2831 9.41547L7.89448 13.8114C7.59115 14.1153 7.10065 14.1153 6.80054 13.8114L6.07125 13.0809C5.76792 12.7771 5.76792 12.2858 6.07125 11.9852L9.18204 8.8692L6.07125 5.75324C5.76792 5.4494 5.76792 4.95808 6.07125 4.65748L6.79732 3.92051C7.10065 3.61667 7.59115 3.61667 7.89126 3.92051L12.2799 8.31647C12.5865 8.62031 12.5865 9.11163 12.2831 9.41547Z" fill="black"/>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								  </div>
+								</div>
+							</div>
+
+							<div class="swiper-pagination swiper-pagination-slider-services"></div>
+						</div>
+
+						<div class="button">
+							<button class="button-default">
+								Lorem Ipsum
+
+								<div class="hexagon">
+									<div class="hexagon-inner">
+										<div class="hexagon-inner-in">
+											<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+												<path d="M12.2831 9.41547L7.89448 13.8114C7.59115 14.1153 7.10065 14.1153 6.80054 13.8114L6.07125 13.0809C5.76792 12.7771 5.76792 12.2858 6.07125 11.9852L9.18204 8.8692L6.07125 5.75324C5.76792 5.4494 5.76792 4.95808 6.07125 4.65748L6.79732 3.92051C7.10065 3.61667 7.59115 3.61667 7.89126 3.92051L12.2799 8.31647C12.5865 8.62031 12.5865 9.11163 12.2831 9.41547Z" fill="black"/>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="section-about">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 left">
+								<div class="text-box">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit morbi laoreet neque</p>
+	
+									<div class="button">
+										<button class="button-default">
+											Lorem Ipsum
+			
+											<div class="hexagon">
+												<div class="hexagon-inner">
+													<div class="hexagon-inner-in">
+														<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+															<path d="M12.2831 9.41547L7.89448 13.8114C7.59115 14.1153 7.10065 14.1153 6.80054 13.8114L6.07125 13.0809C5.76792 12.7771 5.76792 12.2858 6.07125 11.9852L9.18204 8.8692L6.07125 5.75324C5.76792 5.4494 5.76792 4.95808 6.07125 4.65748L6.79732 3.92051C7.10065 3.61667 7.59115 3.61667 7.89126 3.92051L12.2799 8.31647C12.5865 8.62031 12.5865 9.11163 12.2831 9.41547Z" fill="black"/>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="sob-footer">
+				<div class="container">
+					<div class="logo">
+						<a class="logo-footer" href="#">
+							<img src="images/logo-footer.png" alt="Logo">
+						</a>
+
+						<div class="social-media">
+							<ul>
+								<li><a href="#"><img src="images/icons/icon-facebook.svg" alt="Facebook"></a></li>
+								<li><a href="#"><img src="images/icons/icon-whatsapp.svg" alt="Whatsapp"></a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="contact-info">
+						<ul>
+							<li><img src="images/icons/icon-phone.svg" alt="Contact Phone"> 0513 571207</li>
+							<li><img src="images/icons/icon-email.svg" alt="Contact Email"><a href="mailto:info@loonbedrijflolkema.nl">info@loonbedrijflolkema.nl</a></li>
+							<li><img src="images/icons/icon-address.svg" alt="Contact Address">Farskewei 3, 8406 AE, Tijnje</li>
+						</ul>
+					</div>
+
+					<div class="website-info">
+						<div class="row">
+							<div class="col-12 col-md-4">
+								<h6>Onze diensten</h6>
+
+								<ul>
+									<li>Agrarisch Loonwerk</li>
+									<li>Grondverzet & Infra</li>
+									<li>Cultuurtechnisch wer</li>
+									<li>Civiele techniek</li>
+									<li>Verhuur</li>
+								</ul>
+							</div>
+							<div class="col-12 col-md-4">
+								<h6>Certificeringen</h6>
+	
+								<ul>
+									<li>ISO 9001</li>
+									<li>VCA*</li>
+									<li>CO2-Prestatieladder - Niveau 5</li>
+									<li>BRL 9335</li>
+								</ul>
+							</div>
+							<div class="col-12 col-md-4">
+								<h6>Contact</h6>
+	
+								<p>Farskewei 3, 8406 AE, Tijnje</p>
+								<p>0513 571207</p>
+								<p>Nunc risus augue, ullamcorper in augue a, suscipit elementum leo. Suspendisse leo arcu, tempus vitae leo sit amet, consequat auctor velit.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sub-footer">
+				<div class="container">
+					<div class="partner">
+						<p>Wij zijn aangesloten bij:</p>
+						<img src="images/footer-cumela.png" alt="Cumela">
+					</div>
+	
+					<p>© 2023 - Loonbedrijf Lolkema</p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Modal -->
+		<div class="modal fade" id="modalClient" tabindex="-1" aria-labelledby="modalClient" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl modal-dialog-client">
+				<div class="modal-content">
+					<div class="modal-body">
+						<button type="button" class="btn-close mobile" data-bs-dismiss="modal" aria-label="Close"></button>
+
+						<div class="row">
+							<div class="col-md-4">
+								<div class="left">
+									<img src="images/dialog-client-desktop.png" class="desktop" alt="Peach IT">
+									<img src="images/dialog-client-mobile.png" class="mobile" alt="Peach IT">
+
+									<p>Por favor, preencha este formulário se você deseja obter resultados através da tecnologia. Um de nossos consultores entrará em contato com você em breve.</p>
+								</div>
+							</div>
+							<div class="col-md-8">
+								<div class="right">
+									<form action="">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-floating mb-3">
+													<input type="text" class="form-control" id="nome" placeholder="Nome">
+													<label for="nome">Nome</label>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-floating mb-3">
+													<input type="email" class="form-control" id="email" placeholder="name@example.com">
+													<label for="email">Email</label>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-floating mb-3">
+													<input type="whatsapp" class="form-control" id="whatsapp" placeholder="Whatsapp">
+													<label for="whatsapp">Whatsapp</label>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-floating mb-3">
+													<input type="empresa" class="form-control" id="empresa" placeholder="Empresa">
+													<label for="empresa">Empresa</label>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-floating">
+													<textarea class="form-control" placeholder="Mensagem" id="mensagem" style="height: 150px"></textarea>
+													<label for="mensagem">Mensagem</label>
+												</div>
+											</div>
+										</div>
+										<div>
+											<button type="submit" class="button invert">Enviar mensagem</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Bootstrap JS -->
+		<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/bootstrap.bundle.min.js"></script>
+		<!-- Swiper JS -->
+		<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/swiper-bundle.min.js"></script>
+		<!-- App JS -->
+		<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/app.js"></script>
+	</body>
+</html>
