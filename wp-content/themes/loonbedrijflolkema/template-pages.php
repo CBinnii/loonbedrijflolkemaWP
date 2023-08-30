@@ -75,14 +75,37 @@
                 </div>
             </div>
         </div>
-        
+
 	    <?php if( have_rows('layers_page') ):
             while( have_rows('layers_page') ) : the_row();
-
+            
             $titulo = get_sub_field('title');
             $texto = get_sub_field('text');
             $imagem = get_sub_field('image');
+
+            $index = get_row_index();
         ?>
+            <?php if ($index % 2 == 0) {?>
+                
+				<div class="section-content">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 left">
+								<div class="text-box">
+									<h1 class="title primary"><?php echo $titulo ?></h1>
+									<p><?php echo $texto ?></p>
+								</div>
+							</div>
+							
+							<div class="col-md-6 right h-100">
+								<div class="image-box">
+									<div class="hexagon-shape" style="background-image: url('<?php echo $imagem ?>');"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+            <?php } else { ?>
                 <div class="section-content">
                     <div class="container">
                         <div class="row">
@@ -101,6 +124,7 @@
                         </div>
                     </div>
                 </div>
+            <?php } ?>
         <?php 
             endwhile;
         endif;
