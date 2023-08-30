@@ -6,7 +6,7 @@
         <div class="swiper slider-geral">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="slider-general" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/image-14.jpg');">
+                    <div class="slider-general" style="background-image: url('<?php echo wp_get_attachment_url(get_post_thumbnail_id(), 'full');?>');">
                         <div class="container">
                             <div class="row row-slider">
                                 <div class="col-md-12 line-slider-text">
