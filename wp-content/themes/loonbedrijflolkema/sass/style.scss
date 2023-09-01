@@ -30,6 +30,23 @@ html {
 	display: none;
 }
 
+.has-text-align-left {
+	text-align: left !important;
+}
+
+.has-text-align-center {
+	text-align: center !important;
+}
+
+.has-text-align-right {
+	text-align: right !important;
+}
+
+textarea {
+	max-height: 200px;
+	resize: none;
+}
+
 @media screen and (max-width: 991px) {
 	.mob-mb-15 {
 		margin-bottom: 15px;

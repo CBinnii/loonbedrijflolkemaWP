@@ -40,6 +40,11 @@
             }
         }
 
+        &.button-bghex {
+            background: url("../images/icons/hexagono.svg") $primary center right 20px no-repeat;
+            background-size: 32px;
+        }
+
         @media screen and (max-width: 991px) {
             font-size: 16px;
             margin-bottom: 30px;

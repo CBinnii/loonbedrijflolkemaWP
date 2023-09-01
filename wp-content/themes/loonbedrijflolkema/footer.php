@@ -10,49 +10,45 @@
 
 						<div class="social-media">
 							<ul>
-								<li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/icon-facebook.svg" alt="Facebook"></a></li>
-								<li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/icon-whatsapp.svg" alt="Whatsapp"></a></li>
+								<li><a href="<?php echo the_field('facebook', 'option'); ?>" target="blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/icon-facebook.svg" alt="Facebook"></a></li>
+								<li><a href="<?php echo the_field('whatsapp', 'option'); ?>" target="blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/icon-whatsapp.svg" alt="Whatsapp"></a></li>
 							</ul>
 						</div>
 					</div>
 
 					<div class="contact-info">
 						<ul>
-							<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/icon-phone.svg" alt="Contact Phone"> 0513 571207</li>
-							<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/icon-email.svg" alt="Contact Email"><a href="mailto:info@loonbedrijflolkema.nl">info@loonbedrijflolkema.nl</a></li>
-							<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/icon-address.svg" alt="Contact Address">Farskewei 3, 8406 AE, Tijnje</li>
+							<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/icon-phone.svg" alt="Contact Phone"> <?php echo the_field('phone_number', 'option'); ?></li>
+							<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/icon-email.svg" alt="Contact Email"><a href="mailto:<?php echo the_field('email_address', 'option'); ?>"><?php echo the_field('email_address', 'option'); ?></a></li>
+							<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/icon-address.svg" alt="Contact Address"><?php echo the_field('address', 'option'); ?></li>
 						</ul>
 					</div>
 
 					<div class="website-info">
 						<div class="row">
 							<div class="col-12 col-md-4">
-								<h6>Onze diensten</h6>
+								<h6 class="p-0">Onze diensten</h6>
 
-								<ul>
-									<li>Agrarisch Loonwerk</li>
-									<li>Grondverzet & Infra</li>
-									<li>Cultuurtechnisch wer</li>
-									<li>Civiele techniek</li>
-									<li>Verhuur</li>
-								</ul>
+								<?php
+									wp_nav_menu(array(
+										'theme_location' => '',
+										'menu_id' 		 => 'menufooter', 
+										'container' 	 => false,
+										'menu_class' 	 => '',
+										'items_wrap' 	 => '<ul id="%1$s" class="navbar-footer %2$s">%3$s</ul>',
+										'depth' 		 => 2,
+									));
+								?>
 							</div>
 							<div class="col-12 col-md-4">
-								<h6>Certificeringen</h6>
-	
-								<ul>
-									<li>ISO 9001</li>
-									<li>VCA*</li>
-									<li>CO2-Prestatieladder - Niveau 5</li>
-									<li>BRL 9335</li>
-								</ul>
+								<h6 class="p-0">Certificeringen</h6>
+
+								<?php echo get_field('certificeringen', 'option') ?>
 							</div>
 							<div class="col-12 col-md-4">
-								<h6>Contact</h6>
-	
-								<p>Farskewei 3, 8406 AE, Tijnje</p>
-								<p>0513 571207</p>
-								<p>Nunc risus augue, ullamcorper in augue a, suscipit elementum leo. Suspendisse leo arcu, tempus vitae leo sit amet, consequat auctor velit.</p>
+								<h6 class="p-0">Contact</h6>
+
+								<?php echo the_field('contact', 'option'); ?>
 							</div>
 						</div>
 					</div>
