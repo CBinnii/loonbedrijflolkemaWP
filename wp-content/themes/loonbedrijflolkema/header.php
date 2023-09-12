@@ -17,9 +17,9 @@
 		<header id="header" class="header">
 			<nav class="navbar navbar-expand-xl">
 				<div class="container">
-					<a class="navbar-brand" href="/">
+					<div class="navbar-brand">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-header.png" alt="Logo">
-					</a>
+					</div>
 					<div class="navbar-menu">
 						<div class="collapse navbar-collapse" id="navbar-collapse">
                             <?php

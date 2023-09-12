@@ -89,6 +89,10 @@
         .website-info {
             padding: 30px 0;
 
+            .menu-item-69, .menu-item-67 {
+                display: none;
+            }
+            
             h6 {
                 color: $primary;
                 font-size: 18px;

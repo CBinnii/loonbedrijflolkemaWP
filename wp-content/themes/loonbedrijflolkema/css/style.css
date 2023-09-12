@@ -19784,7 +19784,10 @@ input:active, input:focus, button:active, button:focus {
   overflow: hidden; }
   .slider .slider-home, .slider .slider-geral {
     width: 100%;
-    height: 500px; }
+    height: 700px; }
+    @media screen and (max-width: 1920px) {
+      .slider .slider-home, .slider .slider-geral {
+        height: 500px; } }
     @media screen and (max-width: 991px) {
       .slider .slider-home, .slider .slider-geral {
         height: 200px; } }
@@ -19804,7 +19807,10 @@ input:active, input:focus, button:active, button:focus {
         width: 100%;
         height: 100%;
         display: flex;
-        align-items: center; }
+        align-items: center;
+        position: relative; }
+        .slider .slider-home .swiper-slide .slider-general.video, .slider .slider-geral .swiper-slide .slider-general.video {
+          background: none; }
         .slider .slider-home .swiper-slide .slider-general .row-slider, .slider .slider-geral .swiper-slide .slider-general .row-slider {
           align-items: center; }
           .slider .slider-home .swiper-slide .slider-general .row-slider .line-slider-text, .slider .slider-geral .swiper-slide .slider-general .row-slider .line-slider-text {
@@ -19851,6 +19857,17 @@ input:active, input:focus, button:active, button:focus {
         height: 100%;
         object-fit: cover; }
 
+#background-video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1; }
+
 .box-hexagon .swiper-services .swiper-wrapper .swiper-slide {
   min-height: 400px; }
   .box-hexagon .swiper-services .swiper-wrapper .swiper-slide .poligono-slider {
@@ -19859,8 +19876,7 @@ input:active, input:focus, button:active, button:focus {
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    clip-path: polygon(50% 0, 100% 10%, 100% 100%, 0% 100%, 0% 0%, 0% 10%); }
+    background-size: cover; }
     .box-hexagon .swiper-services .swiper-wrapper .swiper-slide .poligono-slider .box-hexagon-text {
       background-color: #dd2444;
       width: 100%;
@@ -20093,8 +20109,7 @@ input:active, input:focus, button:active, button:focus {
         height: 100%;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
-        clip-path: polygon(50% 0, 100% 20%, 100% 80%, 50% 100%, 0% 80%, 0% 20%); }
+        background-size: cover; }
 .section .section-about {
   padding-top: 30px;
   padding-bottom: 50px; }
@@ -20186,7 +20201,7 @@ input:active, input:focus, button:active, button:focus {
     .section .section-services .section-services-top .swiper-navigation-slider {
       position: relative;
       padding-right: 15px;
-      height: 60px;
+      height: 80px;
       width: 75px; }
       .section .section-services .section-services-top .swiper-navigation-slider .swiper-button-next, .section .section-services .section-services-top .swiper-navigation-slider .swiper-button-prev {
         background: none;
@@ -20287,6 +20302,8 @@ input:active, input:focus, button:active, button:focus {
           margin-bottom: 0; }
   .footer .sob-footer .website-info {
     padding: 30px 0; }
+    .footer .sob-footer .website-info .menu-item-69, .footer .sob-footer .website-info .menu-item-67 {
+      display: none; }
     .footer .sob-footer .website-info h6, .footer .sob-footer .website-info .h6 {
       color: #dd2444;
       font-size: 18px;

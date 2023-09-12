@@ -17,7 +17,12 @@ function menuMobile() {
 }
 
 // Initialize Swiper
-var swiperGeral = new Swiper(".slider-geral");
+var swiperGeral = new Swiper(".slider-geral", {
+    pagination: {
+        el: ".swiper-pagination-slider-geral",
+        clickable: true,
+    },
+});
 
 var swiperHome = new Swiper(".slider-home", {
     pagination: {
@@ -27,16 +32,17 @@ var swiperHome = new Swiper(".slider-home", {
 });
 
 var swiperDoing = new Swiper(".swiper-services", {
-    pagination: {
-        el: ".swiper-pagination-slider-services",
-        clickable: true,
-    },
+    // pagination: {
+    //     el: ".swiper-pagination-slider-services",
+    //     clickable: true,
+    // },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
     slidesPerView: 3,
     spaceBetween: 30,
+    loop: true,
     breakpoints: {
         100: {
             slidesPerView: 1,

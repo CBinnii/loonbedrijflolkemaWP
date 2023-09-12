@@ -18,12 +18,16 @@
 
 					<div class="contact-info">
 						<ul>
-							<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/icon-phone.svg" alt="Contact Phone"> <?php echo the_field('phone_number', 'option'); ?></li>
+							<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/icon-phone.svg" alt="Contact Phone"> <a href="<?php echo the_field('call_link', 'option'); ?>"><?php echo the_field('phone_number', 'option'); ?></a> </li>
 							<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/icon-email.svg" alt="Contact Email"><a href="mailto:<?php echo the_field('email_address', 'option'); ?>"><?php echo the_field('email_address', 'option'); ?></a></li>
 							<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/icon-address.svg" alt="Contact Address"><?php echo the_field('address', 'option'); ?></li>
 						</ul>
 					</div>
 
+					<?php 
+						$contact = get_field('contact', 'option');
+						$certificeringen = get_field('certificeringen', 'option');
+					?>
 					<div class="website-info">
 						<div class="row">
 							<div class="col-12 col-md-4">
@@ -40,16 +44,20 @@
 									));
 								?>
 							</div>
-							<div class="col-12 col-md-4">
-								<h6 class="p-0">Certificeringen</h6>
+							<?php if( !empty($certificeringen) ): ?>
+								<div class="col-12 col-md-4">
+									<h6 class="p-0">Certificeringen</h6>
 
-								<?php echo get_field('certificeringen', 'option') ?>
-							</div>
-							<div class="col-12 col-md-4">
-								<h6 class="p-0">Contact</h6>
+									<?php echo get_field('certificeringen', 'option') ?>
+								</div>
+							<?php endif; ?>
+							<?php if( !empty($contact) ): ?>
+								<div class="col-12 col-md-4">
+									<h6 class="p-0">Contact</h6>
 
-								<?php echo the_field('contact', 'option'); ?>
-							</div>
+									<?php echo $contact ?>
+								</div>
+							<?php endif; ?>
 						</div>
 					</div>
 				</div>
@@ -61,7 +69,7 @@
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/footer-cumela.png" alt="Cumela">
 					</div>
 	
-					<p>© 2023 - Loonbedrijf Lolkema</p>
+					<p>Gerealiseerd door <a href="www.webwow.nl" target="_blank">WebWoW</a> © 2023 - Loonbedrijf Lolkema</p>
 				</div>
 			</div>
 		</footer>

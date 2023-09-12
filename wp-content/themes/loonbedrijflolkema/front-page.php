@@ -7,10 +7,23 @@
 				<div class="swiper-wrapper">
 					<?php
 						while( have_rows('image_slider_home') ) : the_row();
+
 						$image = get_sub_field('image');
+						$option = get_sub_field('option');
+
+						$teste = preg_match("/[^\/]+$/", $image, $matches);
+						$last_word = $matches[0];
 					?>
 						<div class="swiper-slide">
-							<div class="slider-general" style="background-image: url('<?php echo $image ?>');"></div>
+							<?php if( $option === "Image" ) { ?>
+								<div class="slider-general" style="background-image: url('<?php echo $image ?>');"></div>
+							<?php } else { ?>
+								<div class="slider-general video">
+									<video id="background-video" autoplay loop muted>
+										<source src="<?php echo $image ?>" type="video/mp4">
+									</video>
+								</div>
+							<?php } ?>
 						</div>
 					<?php endwhile; ?>
 				</div>
@@ -57,7 +70,7 @@
 			<div class="section-services">
 				<div class="container">
 					<div class="section-services-top">
-						<h1 class="title white">Onze Services</h1>
+						<h1 class="title white"><?php echo esc_html( get_field('title_layer') ); ?></h1>
 
 						<div class="swiper-navigation-slider">
 							<div class="hexagon swiper-button-prev">
@@ -93,7 +106,7 @@
 								?>
 									<div class="swiper-slide">
 										<div class="poligono-slider" style="background-image: url('<?php echo $image ?>');">
-											<a href="<?php echo $link ?>" class="box-hexagon-text">
+											<a href="<?php echo $link ?>" class="box-hexagon-text" target="_blank">
 												<p><?php echo $title ?></p>
 
 												<div class="hexagon">
@@ -111,24 +124,6 @@
 								<?php endwhile; ?>
 							</div>
 						</div>
-
-						<div class="swiper-pagination swiper-pagination-slider-services"></div>
-					</div>
-
-					<div class="button">
-						<a href="<?php echo esc_html( get_field('button_link_service') ); ?>" class="button-default">
-							<?php echo esc_html( get_field('button_text_service') ); ?>
-
-							<div class="hexagon">
-								<div class="hexagon-inner">
-									<div class="hexagon-inner-in">
-										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-											<path d="M12.2831 9.41547L7.89448 13.8114C7.59115 14.1153 7.10065 14.1153 6.80054 13.8114L6.07125 13.0809C5.76792 12.7771 5.76792 12.2858 6.07125 11.9852L9.18204 8.8692L6.07125 5.75324C5.76792 5.4494 5.76792 4.95808 6.07125 4.65748L6.79732 3.92051C7.10065 3.61667 7.59115 3.61667 7.89126 3.92051L12.2799 8.31647C12.5865 8.62031 12.5865 9.11163 12.2831 9.41547Z" fill="black"/>
-										</svg>
-									</div>
-								</div>
-							</div>
-						</a>
 					</div>
 				</div>
 			</div>
@@ -142,7 +137,7 @@
 							<p><?php echo esc_html( get_field('text') ); ?></p>
 
 							<div class="button">
-								<a href="<?php echo esc_html( get_field('link_button_contact') ); ?>" class="button-default">
+								<a href="<?php echo esc_html( get_field('link_button_contact') ); ?>" class="button-default" target="_blank">
 									<?php echo esc_html( get_field('button_text_contact') ); ?>
 
 									<div class="hexagon">
