@@ -66,11 +66,11 @@
 			</div>
 		</div>
 
-		<?php if( have_rows('services') ): ?>
+		<?php if( have_rows('services', 'option') ): ?>
 			<div class="section-services">
 				<div class="container">
 					<div class="section-services-top">
-						<h1 class="title white"><?php echo esc_html( get_field('title_layer') ); ?></h1>
+						<h1 class="title white"><?php echo esc_html( get_field('title_layer', 'option') ); ?></h1>
 
 						<div class="swiper-navigation-slider">
 							<div class="hexagon swiper-button-prev">
@@ -98,7 +98,7 @@
 						<div class="slider swiper-services">
 							<div class="swiper-wrapper">
 								<?php
-									while( have_rows('services') ) : the_row();
+									while( have_rows('services', 'option') ) : the_row();
 
 									$image = get_sub_field('image');
 									$title = get_sub_field('title');

@@ -18,16 +18,26 @@ function menuMobile() {
 
 // Initialize Swiper
 var swiperGeral = new Swiper(".slider-geral", {
-    pagination: {
-        el: ".swiper-pagination-slider-geral",
-        clickable: true,
+    // pagination: {
+    //     el: ".swiper-pagination-slider-geral",
+    //     clickable: true,
+    // },
+    loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
     },
 });
 
 var swiperHome = new Swiper(".slider-home", {
-    pagination: {
-        el: ".swiper-pagination-slider-home",
-        clickable: true,
+    // pagination: {
+    //     el: ".swiper-pagination-slider-home",
+    //     clickable: true,
+    // },
+    loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
     },
 });
 
