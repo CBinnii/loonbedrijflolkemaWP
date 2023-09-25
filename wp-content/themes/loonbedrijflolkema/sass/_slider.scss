@@ -101,6 +101,31 @@
 				object-fit: cover;
 			}
 		}
+                
+		.swiper-button-next-slider-home, .swiper-button-prev-slider-home, .swiper-button-next-slider-geral, .swiper-button-prev-slider-geral {
+			background: none;
+			right: inherit;
+			width: 30px;
+			height: 40px;
+			z-index: 9999;
+			display: none;
+
+			&::after {
+				content: initial;
+			}
+
+			@media screen and (max-width: 991px) {
+				display: block;
+			}
+		}
+
+		.swiper-button-next-slider-home, .swiper-button-next-slider-geral {
+			right: 0px;
+		}
+
+		.swiper-button-prev-slider-home, .swiper-button-prev-slider-geral {
+			left: 35px;
+		}
 	}
 }
 

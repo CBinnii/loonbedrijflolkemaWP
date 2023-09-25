@@ -19856,6 +19856,22 @@ input:active, input:focus, button:active, button:focus {
         width: 100%;
         height: 100%;
         object-fit: cover; }
+    .slider .slider-home .swiper-button-next-slider-home, .slider .slider-home .swiper-button-prev-slider-home, .slider .slider-home .swiper-button-next-slider-geral, .slider .slider-home .swiper-button-prev-slider-geral, .slider .slider-geral .swiper-button-next-slider-home, .slider .slider-geral .swiper-button-prev-slider-home, .slider .slider-geral .swiper-button-next-slider-geral, .slider .slider-geral .swiper-button-prev-slider-geral {
+      background: none;
+      right: inherit;
+      width: 30px;
+      height: 40px;
+      z-index: 9999;
+      display: none; }
+      .slider .slider-home .swiper-button-next-slider-home::after, .slider .slider-home .swiper-button-prev-slider-home::after, .slider .slider-home .swiper-button-next-slider-geral::after, .slider .slider-home .swiper-button-prev-slider-geral::after, .slider .slider-geral .swiper-button-next-slider-home::after, .slider .slider-geral .swiper-button-prev-slider-home::after, .slider .slider-geral .swiper-button-next-slider-geral::after, .slider .slider-geral .swiper-button-prev-slider-geral::after {
+        content: initial; }
+      @media screen and (max-width: 991px) {
+        .slider .slider-home .swiper-button-next-slider-home, .slider .slider-home .swiper-button-prev-slider-home, .slider .slider-home .swiper-button-next-slider-geral, .slider .slider-home .swiper-button-prev-slider-geral, .slider .slider-geral .swiper-button-next-slider-home, .slider .slider-geral .swiper-button-prev-slider-home, .slider .slider-geral .swiper-button-next-slider-geral, .slider .slider-geral .swiper-button-prev-slider-geral {
+          display: block; } }
+    .slider .slider-home .swiper-button-next-slider-home, .slider .slider-home .swiper-button-next-slider-geral, .slider .slider-geral .swiper-button-next-slider-home, .slider .slider-geral .swiper-button-next-slider-geral {
+      right: 0px; }
+    .slider .slider-home .swiper-button-prev-slider-home, .slider .slider-home .swiper-button-prev-slider-geral, .slider .slider-geral .swiper-button-prev-slider-home, .slider .slider-geral .swiper-button-prev-slider-geral {
+      left: 35px; }
 
 #background-video {
   height: 100%;
@@ -19867,6 +19883,9 @@ input:active, input:focus, button:active, button:focus {
   top: 0;
   bottom: 0;
   z-index: -1; }
+  @media screen and (max-width: 991px) {
+    #background-video {
+      height: 120%; } }
 
 .box-hexagon .swiper-services .swiper-wrapper .swiper-slide {
   min-height: 400px; }

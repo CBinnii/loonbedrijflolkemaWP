@@ -1,10 +1,10 @@
         </section>
-
+		
         <footer class="footer">
 			<div class="sob-footer">
 				<div class="container">
 					<div class="logo">
-						<a class="logo-footer" href="#">
+						<a class="logo-footer" href="<?php echo get_home_url(); ?>">
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-footer.png" alt="Logo">
 						</a>
 
@@ -20,9 +20,10 @@
 						<ul>
 							<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/icon-phone.svg" alt="Contact Phone"> <a href="<?php echo the_field('call_link', 'option'); ?>"><?php echo the_field('phone_number', 'option'); ?></a> </li>
 							<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/icon-email.svg" alt="Contact Email"><a href="mailto:<?php echo the_field('email_address', 'option'); ?>"><?php echo the_field('email_address', 'option'); ?></a></li>
-							<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/icon-address.svg" alt="Contact Address"><?php echo the_field('address', 'option'); ?></li>
+							<li><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/icon-address.svg" alt="Contact Address"><a href="<?php echo the_field('link_maps', 'option'); ?>" target="_blank"><?php echo the_field('address', 'option'); ?></a></li>
 						</ul>
 					</div>
+					
 
 					<?php 
 						$contact = get_field('contact', 'option');

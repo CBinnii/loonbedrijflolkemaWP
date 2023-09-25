@@ -22,6 +22,10 @@ var swiperGeral = new Swiper(".slider-geral", {
     //     el: ".swiper-pagination-slider-geral",
     //     clickable: true,
     // },
+    navigation: {
+        nextEl: '.swiper-button-next-slider-geral',
+        prevEl: '.swiper-button-prev-slider-geral',
+    },
     loop: true,
     autoplay: {
         delay: 2500,
@@ -34,6 +38,10 @@ var swiperHome = new Swiper(".slider-home", {
     //     el: ".swiper-pagination-slider-home",
     //     clickable: true,
     // },
+    navigation: {
+        nextEl: '.swiper-button-next-slider-home',
+        prevEl: '.swiper-button-prev-slider-home',
+    },
     loop: true,
     autoplay: {
         delay: 2500,
